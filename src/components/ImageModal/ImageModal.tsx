@@ -1,10 +1,9 @@
 import Modal from "react-modal";
 import css from "./ImageModal.module.css";
 import { FC } from "react";
-import { selectedPhoto } from "../App/AppTypes";
 import { ImageModalProps } from "./ImageModalType";
 
-Modal.setAppElement("root");
+Modal.setAppElement("#root");
 
 const ImageModal: FC<ImageModalProps> = ({
   isOpen = false,
