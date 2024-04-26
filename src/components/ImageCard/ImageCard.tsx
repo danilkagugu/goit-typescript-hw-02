@@ -1,6 +1,9 @@
+import { FC } from "react";
 import css from "./ImageCard.module.css";
+import { Image, selectedPhoto } from "../App/AppTypes";
+import { ImageProps } from "./ImageCardType";
 
-const ImageCard = ({ data, onSelect }) => {
+const ImageCard: FC<ImageProps> = ({ data, onSelect }) => {
   return (
     <div
       className={css.imgBox}
