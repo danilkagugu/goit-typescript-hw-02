@@ -28,8 +28,10 @@ function App() {
     const fetchData = async () => {
       try {
         setLoaderVissible(true);
+        const data = await ApiService(query, page);
+        console.log("data: ", data);
 
-        const { results, total_pages } = await ApiService(query, page);
+        const { results, total_pages } = data.data;
         if (results.length === 0) {
           toast.error("This didn't work.");
           return;
